@@ -102,7 +102,18 @@
     background: rgba(0,0,0,0.2);
     border-radius: 4px;
 }
+#methodology {
+    --content-max-width: 1440px;  /* 控制最大显示宽度 */
+}
 
+#methodology .container-fluid {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+#methodology .card-img-top {
+    padding: 0 2rem;  /* 图片两侧留白 */
+}
 @media (max-width: 768px) {
     .abstract-container {
         column-count: 1 !important;
@@ -117,6 +128,8 @@
                 padding: 2rem 0;
             }
         }
+
+    
     </style>
 </head>
 <body>
@@ -219,8 +232,7 @@
  <!-- Methodology -->
 <section class="py-5" id="methodology">
     <div class="container">
-        <h2 class="text-center fw-bold mb-5">Technical Approach</h2>
-        
+        <h2 class="text-center fw-bold mb-5 display-4">Technical Approach</h2> 
         <div class="row justify-content-center">
                 <div class="col-12 col-xl-10 col-xxl-9">  <!-- 增加列宽层级 -->
                 <!-- 导航选项卡 -->
