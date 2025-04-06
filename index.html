@@ -91,7 +91,27 @@
             width: 100%;
             height: 100%;
         }
-        
+        .scrollable-illustration {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,0.2) transparent;
+}
+.scrollable-illustration::-webkit-scrollbar {
+    height: 8px;
+}
+.scrollable-illustration::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .abstract-container {
+        column-count: 1 !important;
+    }
+    .illustration-container {
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+}
         @media (max-width: 768px) {
             .hero-banner {
                 padding: 2rem 0;
