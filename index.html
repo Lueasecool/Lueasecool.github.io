@@ -112,48 +112,61 @@
         </div>
     </section>
 
-    <!-- Overview -->
     <section class="py-5">
         <div class="container">
-            <div class="row align-items-center"> <!-- 添加行布局 -->
-                <!-- 左侧摘要文本 -->
-                <div class="col-lg-8 mb-4 mb-lg-0">
-            <!-- 双列布局 -->
-                    <div class="abstract-container">
-            <h2>Abstract</h2>
-            <blockquote style="text-align: justify; text-indent: 2em; margin: 15px 0;">
-                        Enabling robots to arrange items on a table in a
-                        manner consistent with human-like common sense has consis-
-                        tently been a focal point of in-depth exploration for researchers
-                        in the field of robotics. To achieve this goal, robots need to
-                        understand the semantic configurations and abstract relation-
-                        ships between interactive objects and transfer the learned prior
-                        knowledge into the arrangement strategies for tabletop objects.
-                        In this study, we introduce a method called ArrangeBot, which
-                        is an innovative framework for tabletop object arrangement.
-                        This framework integrates a large language model with a scene
-                        graph-based diffusion denoising model, where the large language
-                        model is responsible for abstracting a scene graph that aligns
-                        with common sense, while the diffusion model generates the
-                        required fine-grained arrangement information based on a rough
-                        scene graph description. Specifically, we introduce a diffusion
-                        sharing mechanism for scene graph nodes to ensure the capture
-                        of spatial relationships between object nodes. Quantitative and
-                        qualitative experimental results demonstrate that ArrangeBot
-                        not only achieves superior performance in object arrangement
-                        accuracy but also exhibits significant advantages over existing
-                        methods in terms of physical spatial rationality and aesthetic
-                        considerations. Furthermore, the proposed framework has been
-                        validated through real-world robotic experiments, proving its
-                        effectiveness in executing tabletop arrangement tasks.
-            </blockquote>
-                     </div>
+            <!-- 摘要文本区块 -->
+            <div class="abstract-container mb-5">
+                <h2 class="display-5 mb-4 border-bottom pb-3">Abstract</h2>
+                <div class="fs-5 lh-base" style="column-count: 2; column-gap: 2rem">
+                    Enabling robots to arrange items on a table in a
+                    manner consistent with human-like common sense has consis-
+                    tently been a focal point of in-depth exploration for researchers
+                    in the field of robotics. To achieve this goal, robots need to
+                    understand the semantic configurations and abstract relation-
+                    ships between interactive objects and transfer the learned prior
+                    knowledge into the arrangement strategies for tabletop objects.
+                    In this study, we introduce a method called ArrangeBot, which
+                    is an innovative framework for tabletop object arrangement.
+                    This framework integrates a large language model with a scene
+                    graph-based diffusion denoising model, where the large language
+                    model is responsible for abstracting a scene graph that aligns
+                    with common sense, while the diffusion model generates the
+                    required fine-grained arrangement information based on a rough
+                    scene graph description. Specifically, we introduce a diffusion
+                    sharing mechanism for scene graph nodes to ensure the capture
+                    of spatial relationships between object nodes. Quantitative and
+                    qualitative experimental results demonstrate that ArrangeBot
+                    not only achieves superior performance in object arrangement
+                    accuracy but also exhibits significant advantages over existing
+                    methods in terms of physical spatial rationality and aesthetic
+                    considerations. Furthermore, the proposed framework has been
+                    validated through real-world robotic experiments, proving its
+                    effectiveness in executing tabletop arrangement tasks
                 </div>
-               <!-- 右侧示意图 -->
-            <div class="col-lg-4">
-                <img src="intro.png" alt="Framework Illustration" 
-                     class="img-fluid rounded shadow" 
-                     style="max-height: 800px; width: 800px;">
+            </div>
+    
+            <!-- 示意图展示区 -->
+            <div class="illustration-container bg-light rounded-4 p-4 shadow-lg">
+                <!-- 响应式滚动容器 -->
+                <div class="scrollable-illustration" style="max-height: 70vh; overflow-y: auto">
+                    <img src="your-image-path.jpg" 
+                         alt="ArrangeBot Framework" 
+                         class="img-fluid w-auto d-block mx-auto"
+                         style="min-width: 1200px; transform: translateZ(0)"
+                         loading="lazy">
+                </div>
+                
+                <!-- 可视化控制条 -->
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div class="text-muted">
+                        <i class="bi bi-arrows-angle-expand me-2"></i>
+                        横向滚动查看完整示意图
+                    </div>
+                    <button class="btn btn-sm btn-outline-dark" 
+                            onclick="this.previousElementSibling.scrollBy({left: 200, behavior: 'smooth'})">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
             </div>
 
             
