@@ -115,67 +115,48 @@
     <!-- Overview -->
     <section class="py-5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
+            <!-- 双列布局 -->
+            <div class="row align-items-start">  <!-- 修改为align-items-start保证顶部对齐 -->
+                <!-- 左侧摘要列 -->
+                <div class="col-lg-6 order-lg-1">  <!-- 调整顺序控制 -->
                     <h2 class="fw-bold mb-4">Abstract</h2>
-                    <p class="lead custom-lead">Enabling robots to arrange items on a table in a
-                        manner consistent with human-like common sense has consis-
-                        tently been a focal point of in-depth exploration for researchers
-                        in the field of robotics. To achieve this goal, robots need to
-                        understand the semantic configurations and abstract relation-
-                        ships between interactive objects and transfer the learned prior
-                        knowledge into the arrangement strategies for tabletop objects.
-                        In this study, we introduce a method called ArrangeBot, which
-                        is an innovative framework for tabletop object arrangement.
-                        This framework integrates a large language model with a scene
-                        graph-based diffusion denoising model, where the large language
-                        model is responsible for abstracting a scene graph that aligns
-                        with common sense, while the diffusion model generates the
-                        required fine-grained arrangement information based on a rough
-                        scene graph description. Specifically, we introduce a diffusion
-                        sharing mechanism for scene graph nodes to ensure the capture
-                        of spatial relationships between object nodes. Quantitative and
-                        qualitative experimental results demonstrate that ArrangeBot
-                        not only achieves superior performance in object arrangement
-                        accuracy but also exhibits significant advantages over existing
-                        methods in terms of physical spatial rationality and aesthetic
-                        considerations. Furthermore, the proposed framework has been
-                        validated through real-world robotic experiments, proving its
-                        effectiveness in executing tabletop arrangement tasks.</p>
-                    
-                    <div class="row mt-4">
-                        <div class="col-md-6 mb-3">
-                            <div class="feature-card p-3 h-100">
-                                <h5><span class="badge metric-badge me-2">1</span> Scene Graph Parsing</h5>
-                                <p>LLM extracts spatial relationships (e.g., "fork left of plate") as lightweight scene graphs</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="feature-card p-3 h-100">
-                                <h5><span class="badge metric-badge me-2">2</span> Diffusion with Sharing</h5>
-                                <p>Node-sharing mechanism ensures physically plausible layouts</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="feature-card p-3 h-100">
-                                <h5><span class="badge metric-badge me-2">3</span> Real-World Validation</h5>
-                                <p>84.3% success rate on Franka Research 3 robot</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="feature-card p-3 h-100">
-                                <h5><span class="badge metric-badge me-2">4</span> Multi-Objective</h5>
-                                <p>Simultaneously optimizes for function, stability, and aesthetics</p>
-                            </div>
-                        </div>
+                    <p class="lead custom-lead">
+                        [您的摘要内容...]
+                    </p>
+                </div>
+    
+                <!-- 右侧示意图列 -->
+                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">  <!-- 增加垂直间距 -->
+                   
+                </div>
+            </div>
+    
+            <!-- 关键点卡片（全宽） -->
+            <div class="row mt-4">
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="feature-card p-3 h-100">
+                        <h5><span class="badge metric-badge me-2">1</span> Scene Parsing</h5>
+                        <p>LLM extracts spatial relationships as lightweight scene graphs</p>
                     </div>
                 </div>
-                <!-- <div class="col-lg-6">
-                    <div class="video-container mt-lg-0 mt-4">
-                        <!-- Replace with your actual video embed code -->
-                        <!-- <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="feature-card p-3 h-100">
+                        <h5><span class="badge metric-badge me-2">2</span> Diffusion Sharing</h5>
+                        <p>Node-sharing ensures physical plausibility</p>
                     </div>
-                </div> --> -->
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="feature-card p-3 h-100">
+                        <h5><span class="badge metric-badge me-2">3</span> Real Validation</h5>
+                        <p>84.3% success rate on Franka</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="feature-card p-3 h-100">
+                        <h5><span class="badge metric-badge me-2">4</span> Multi-Objective</h5>
+                        <p>Optimizes function/stability/aesthetics</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
