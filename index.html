@@ -216,119 +216,90 @@
     <!-- Key Results -->
     
 
-    <!-- Methodology -->
-    <section class="py-5" id="methodology">
-        <div class="container">
-            <h2 class="text-center fw-bold mb-5">Technical Approach</h2>
-            
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="sticky-top pt-3" style="top: 20px;">
-                        <ul class="nav nav-pills mb-4" id="methodTabs" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="overview-tab" data-bs-toggle="pill" data-bs-target="#overview" type="button" role="tab">Overview</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="llm-tab" data-bs-toggle="pill" data-bs-target="#llm" type="button" role="tab">LLM Parsing</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="diffusion-tab" data-bs-toggle="pill" data-bs-target="#diffusion" type="button" role="tab">Diffusion</button>
-                            </li>
-                        </ul>
-                        
-                        <div class="tab-content" id="methodTabsContent">
-                            <div class="tab-pane fade show active" id="overview" role="tabpanel">
-                                <img src="pipeline2.png" class="img-fluid rounded mb-3" alt="System Overview">
-                                <p>ArrangeBot's three-stage pipeline: (1) LLM-based scene graph generation, (2) Graph neural network encoding, and (3) Conditional diffusion with node sharing.</p>
+ <!-- Methodology -->
+<section class="py-5" id="methodology">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Technical Approach</h2>
+        
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <!-- 导航选项卡 -->
+                <div class="nav-tabs-wrapper">
+                    <ul class="nav nav-pills justify-content-center mb-4" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" data-bs-toggle="tab" 
+                                    data-bs-target="#overview" type="button">
+                                Overview
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-bs-toggle="tab" 
+                                    data-bs-target="#llm" type="button">
+                                LLM Parsing
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-bs-toggle="tab" 
+                                    data-bs-target="#diffusion" type="button">
+                                Diffusion
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 内容面板 -->
+                <div class="tab-content">
+                    <!-- Overview 面板 -->
+                    <div class="tab-pane fade show active" id="overview">
+                        <div class="card border-0 shadow">
+                            <img src="pipeline2.png" class="card-img-top" alt="System Overview">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Three-stage pipeline:<br>
+                                    1. LLM-based scene graph generation<br>
+                                    2. Graph neural network encoding<br>
+                                    3. Conditional diffusion with node sharing
+                                </p>
                             </div>
-                            <div class="tab-pane fade" id="llm" role="tabpanel">
-                                <img src="prompts.png" class="img-fluid rounded mb-3" alt="LLM Prompt">
-                                <pre><code>{
+                        </div>
+                    </div>
+
+                    <!-- LLM Parsing 面板 -->
+                    <div class="tab-pane fade" id="llm">
+                        <div class="card border-0 shadow">
+                            <img src="prompts.png" class="card-img-top" alt="LLM Prompt">
+                            <div class="card-body">
+                                <pre class="bg-light p-3 rounded"><code>{
   "relationships": [
     ["plate", "fork", "left_of", "functional"],
     ["cup", "plate", "close_by", "spatial"]
   ]
 }</code></pre>
-                                <p>LLM converts natural language instructions into structured scene graphs with semantic relationships.</p>
-                            </div>
-                            <div class="tab-pane fade" id="diffusion" role="tabpanel">
-                                <img src="https://via.placeholder.com/600x300?text=Diffusion+Process" class="img-fluid rounded mb-3" alt="Diffusion Process">
-                                <p>Node-sharing mechanism propagates spatial constraints during denoising steps to maintain relationship consistency.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Key Components</h5>
-                            <div class="accordion" id="componentsAccordion">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#component1">
-                                            Scene Graph Generation
-                                        </button>
-                                    </h2>
-                                    <div id="component1" class="accordion-collapse collapse show" data-bs-parent="#componentsAccordion">
-                                        <div class="accordion-body">
-                                            <p>Fine-tuned LLM processes:</p>
-                                            <ul>
-                                                <li>Object categories and dimensions</li>
-                                                <li>User functional requirements</li>
-                                                <li>Common-sense spatial rules</li>
-                                            </ul>
-                                            <p>Outputs lightweight scene graph with only essential nodes and edges.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#component2">
-                                            Graph Neural Encoder
-                                        </button>
-                                    </h2>
-                                    <div id="component2" class="accordion-collapse collapse" data-bs-parent="#componentsAccordion">
-                                        <div class="accordion-body">
-                                            <p>Triplet-GCN architecture:</p>
-                                            <pre><code>αᵥ⁽ᵏ⁾, βₑ⁽ᵏ⁺¹⁾, αᵥⱼ⁽ᵏ⁾ = h₁(βᵥᵢ⁽ᵏ⁾, βₑᵢ→ⱼ⁽ᵏ⁾, βᵥⱼ⁽ᵏ⁾)
-βᵥᵢ⁽ᵏ⁺¹⁾ = αᵥᵢ⁽ᵏ⁾ + h₂(Avg(αᵥⱼ⁽ᵏ⁾))</code></pre>
-                                            <p>Encodes both node attributes and edge relationships.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#component3">
-                                            Diffusion with Sharing
-                                        </button>
-                                    </h2>
-                                    <div id="component3" class="accordion-collapse collapse" data-bs-parent="#componentsAccordion">
-                                        <div class="accordion-body">
-                                            <p>Key innovations:</p>
-                                            <ul>
-                                                <li>Dynamic node feature sharing during denoising</li>
-                                                <li>Scene-graph conditioned noise prediction</li>
-                                                <li>Time-dependent relationship weighting</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p class="card-text mt-3">
+                                    LLM converts natural language instructions 
+                                    into structured scene graphs with semantic relationships.
+                                </p>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Ablation Study</h5>
-                            <img src="https://via.placeholder.com/600x300?text=Ablation+Results" class="img-fluid rounded mb-3" alt="Ablation Results">
-                            <p>Node sharing mechanism improves relationship accuracy by 12.7% compared to baseline diffusion.</p>
+
+                    <!-- Diffusion 面板 -->
+                    <div class="tab-pane fade" id="diffusion">
+                        <div class="card border-0 shadow">
+                            <img src="diffusion-process.png" class="card-img-top" alt="Diffusion Process">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Node-sharing mechanism maintains relationship consistency
+                                    through spatial constraint propagation during denoising.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
 
@@ -660,3 +631,17 @@
             <div class="row">
                 <div class="col-md-6">
                     <p class="small">© 2024 Tongji University Robotics Lab.
+
+                        </p>
+
+                </div>  
+                <div class="col-md-6 text-end">
+                    <a href="#" class="text-white">Privacy Policy</a> |
+                    <a href="#" class="text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
