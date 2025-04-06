@@ -241,9 +241,18 @@
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" data-bs-toggle="tab" 
                                     data-bs-target="#diffusion" type="button">
-                                Diffusion
+                                Graph  Encoding
                             </button>
                         </li>
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-bs-toggle="tab" 
+                                    data-bs-target="#diffusion" type="button">
+                                Diffusion Sharing
+                            </button>
+                        </li>
+
+
                     </ul>
                 </div>
 
@@ -283,10 +292,26 @@
                         </div>
                     </div>
 
+
+                    <!-- Graph Encoding 面板 -->   
+                    
+                    <div class="tab-pane fade" id="diffusion">
+                        <div class="card border-0 shadow">
+                            <img src="method_1.png" class="card-img-top" alt="Diffusion Process">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Node-sharing mechanism maintains relationship consistency
+                                    through spatial constraint propagation during denoising.
+                                </p>
+                            </div>
+                        </div>
+                    </div>     
+
+
                     <!-- Diffusion 面板 -->
                     <div class="tab-pane fade" id="diffusion">
                         <div class="card border-0 shadow">
-                            <img src="diffusion-process.png" class="card-img-top" alt="Diffusion Process">
+                            <img src="method2.png" class="card-img-top" alt="Diffusion Process">
                             <div class="card-body">
                                 <p class="card-text">
                                     Node-sharing mechanism maintains relationship consistency
@@ -295,6 +320,10 @@
                             </div>
                         </div>
                     </div>
+
+
+
+
                 </div>
             </div>
         </div>
