@@ -171,6 +171,71 @@
             </div>
         </div>
     </section>
+    <style>
+        /* 自定义标题样式 */
+        .hero-banner h1 {
+            font-size: 4.5rem !important;  /* 主标题字号放大 */
+            letter-spacing: -0.05em;      /* 字母间距微调 */
+            margin-bottom: 1.5rem !important;
+        }
+        
+        /* 作者列表强化 */
+        .author-list span {
+            font-size: 1.25rem;           /* 作者名字体放大 */
+            font-weight: 500;             /* 中等字重 */
+            padding: 0.35rem 0.75rem;     /* 增加呼吸空间 */
+            background: rgba(255,255,255,0.1); /* 浅色背景衬底 */
+            border-radius: 0.5rem;         /* 圆角效果 */
+            transition: transform 0.2s;    /* 悬互动效果 */
+        }
+        
+        .author-list span:hover {
+            transform: translateY(-2px);   /* 悬停微抬效果 */
+        }
+        
+        /* 适应移动端 */
+        @media (max-width: 768px) {
+            .hero-banner h1 {
+                font-size: 3rem !important;
+            }
+            .author-list span {
+                font-size: 1rem;
+                padding: 0.25rem 0.5rem;
+            }
+        }
+        </style>
+        
+        <section class="hero-banner text-center">
+            <div class="container position-relative" style="z-index: 1;">
+                <!-- 强化主标题 -->
+                <h1 class="display-2 fw-bold mb-4">ArrangeBot</h1>
+                <p class="lead mb-4 fs-3">LLM-Guided Scene Graph-Conditioned Diffusion for Structured Robotic Tabletop Arrangement</p>
+        
+                <!-- 层级化作者信息 -->
+                <div class="author-list mb-5">
+                    <div class="d-flex flex-wrap justify-content-center gap-4">  <!-- 增加间距 -->
+                        <span class="text-primary">Zhipeng Wang<sup>1</sup></span>
+                        <span>Yubao Liu<sup>1</sup></span>
+                        <span>Jiang Rong<sup>1</sup></span>
+                        <span>Hongrui Sang<sup>1</sup></span>
+                        <span class="text-warning">Yanmin Zhou<sup>1</sup></span>
+                        <span class="text-success">Li Xin<sup>1,*</sup></span>
+                        <span>He Bin<sup>1</sup></span>
+                    </div>
+                    <div class="affiliation mt-3 fs-5">  <!-- 机构信息放大 -->
+                        <sup>1</sup>Tongji University &nbsp;|&nbsp; 
+                        <sup>*</sup>Corresponding Author: lixin@tongji.edu.cn
+                    </div>
+                </div>
+                
+                <!-- 按钮组 -->
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#paper" class="btn btn-light btn-lg px-4 py-2 rounded-pill">📄 Paper</a>
+                    <a href="#code" class="btn btn-outline-light btn-lg px-4 py-2 rounded-pill">💻 Code</a>
+                    <a href="#demo" class="btn btn-outline-light btn-lg px-4 py-2 rounded-pill">🎥 Demo</a>
+                </div>
+            </div>
+        </section>
 
     <section class="py-5">
         <div class="container">
