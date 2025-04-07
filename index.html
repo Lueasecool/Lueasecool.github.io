@@ -648,7 +648,73 @@
             </div>
         </div>
     </section>
-
+    <section class="py-5 bg-light" id="demo">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Video Demonstration</h2>
+            
+            <!-- 三视频横向布局 -->
+            <div class="row g-4 justify-content-center">
+                <!-- Part 1 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="ratio ratio-16x9">
+                            <video controls poster="part1-poster.jpg" class="embed-responsive-item">
+                                <source src="demo_part1.webm" type="video/webm">
+                                <source src="demo_1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Part 1: Scene Understanding</h5>
+                            <p class="text-muted small mb-0">Duration: 0:45</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Part 2 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="ratio ratio-16x9">
+                            <video controls poster="part2-poster.jpg">
+                                <source src="demo_part2.webm" type="video/webm">
+                                <source src="demo_2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Part 2: Optimization Process</h5>
+                            <p class="text-muted small mb-0">Duration: 1:15</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Part 3 -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="ratio ratio-16x9">
+                            <video controls poster="part3-poster.jpg">
+                                <source src="demo_part3.webm" type="video/webm">
+                                <source src="demo_3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Part 3: Real Execution</h5>
+                            <p class="text-muted small mb-0">Duration: 0:55</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- 视频压缩建议 -->
+            <div class="alert alert-info mt-4" role="alert">
+                <i class="bi bi-info-circle me-2"></i>
+                Recommended video settings: 720p resolution, WEBM format (VP9 codec),
+                bitrate 800-1200kbps. Use FFmpeg: 
+                <code>ffmpeg -i input.mp4 -vf scale=1280:-2 -c:v libvpx-vp9 -crf 30 -b:v 1M -c:a libopus output.webm</code>
+            </div>
+        </div>
+    </section>
     <!-- Paper & Resources -->
     <section class="py-5" id="paper">
         <div class="container">
