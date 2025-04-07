@@ -286,23 +286,49 @@
                     </div>
 
                     <!-- LLM Parsing 面板 -->
-                    <div class="tab-pane fade" id="llm">
-                        <div class="card border-0 shadow">
-                            <img src="prompts.png" class="card-img-top" alt="LLM Prompt">
-                            <div class="card-body">
-                                <pre class="bg-light p-3 rounded"><code>{
+<div class="tab-pane fade" id="llm">
+    <div class="card border-0 shadow">
+        <div class="card-body">
+            <!-- 双图布局 -->
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="img-container border rounded p-2">
+                        <img src="prompts.png" 
+                             class="img-fluid rounded" 
+                             alt="Prompt Engineering">
+                        <div class="caption text-muted mt-2 small">
+                            Fig. 2a: Multi-step prompt design
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-container border rounded p-2">
+                        <img src="prompt.png" 
+                             class="img-fluid rounded" 
+                             alt="Parsing Process">
+                        <div class="caption text-muted mt-2 small">
+                            Fig. 2b: Semantic parsing workflow
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 代码示例 -->
+            <pre class="bg-light p-3 rounded mt-4"><code>{
   "relationships": [
     ["plate", "fork", "left_of", "functional"],
     ["cup", "plate", "close_by", "spatial"]
   ]
 }</code></pre>
-                                <p class="card-text mt-3">
-                                    LLM converts natural language instructions 
-                                    into structured scene graphs with semantic relationships.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+
+            <!-- 说明文本 -->
+            <p class="card-text mt-3">
+                Two-stage LLM processing: (1) Multi-modal instruction understanding, 
+                (2) Structured scene graph generation with error correction
+            </p>
+        </div>
+    </div>
+</div>
 
 
                     <!-- Graph Encoding 面板 -->   
@@ -455,9 +481,7 @@
                                                  class="d-block w-100 h-100" 
                                                  alt="Simulation 1"
                                                  style="object-fit: cover;">
-                                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 mt-auto">
-                                                <p>Full kitchen arrangement simulation</p>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                     <div class="carousel-item  h-100">
@@ -466,9 +490,7 @@
                                                  class="d-block w-100 h-100" 
                                                  alt="Simulation 1"
                                                  style="object-fit: cover;">
-                                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 mt-auto">
-                                                <p>Full kitchen arrangement simulation</p>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                     <div class="carousel-item  h-100">
@@ -477,9 +499,7 @@
                                                  class="d-block w-100 h-100" 
                                                  alt="Simulation 1"
                                                  style="object-fit: cover;">
-                                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 mt-auto">
-                                                <p>Full kitchen arrangement simulation</p>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                     <div class="carousel-item  h-100">
@@ -488,9 +508,7 @@
                                                  class="d-block w-100 h-100" 
                                                  alt="Simulation 1"
                                                  style="object-fit: cover;">
-                                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 mt-auto">
-                                                <p>Full kitchen arrangement simulation</p>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                     <div class="carousel-item  h-100">
@@ -499,9 +517,7 @@
                                                  class="d-block w-100 h-100" 
                                                  alt="Simulation 1"
                                                  style="object-fit: cover;">
-                                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 mt-auto">
-                                                <p>Full kitchen arrangement simulation</p>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                     <div class="carousel-item  h-100">
@@ -510,9 +526,7 @@
                                                  class="d-block w-100 h-100" 
                                                  alt="Simulation 1"
                                                  style="object-fit: cover;">
-                                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 mt-auto">
-                                                <p>Full kitchen arrangement simulation</p>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                     <div class="carousel-item  h-100">
@@ -521,9 +535,7 @@
                                                  class="d-block w-100 h-100" 
                                                  alt="Simulation 1"
                                                  style="object-fit: cover;">
-                                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 mt-auto">
-                                                <p>Full kitchen arrangement simulation</p>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                     <div class="carousel-item  h-100">
@@ -532,9 +544,7 @@
                                                  class="d-block w-100 h-100" 
                                                  alt="Simulation 1"
                                                  style="object-fit: cover;">
-                                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 mt-auto">
-                                                <p>Full kitchen arrangement simulation</p>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                     <div class="carousel-item  h-100">
@@ -543,9 +553,7 @@
                                                  class="d-block w-100 h-100" 
                                                  alt="Simulation 1"
                                                  style="object-fit: cover;">
-                                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 mt-auto">
-                                                <p>Full kitchen arrangement simulation</p>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                     <div class="carousel-item  h-100">
@@ -554,9 +562,7 @@
                                                  class="d-block w-100 h-100" 
                                                  alt="Simulation 1"
                                                  style="object-fit: cover;">
-                                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 mt-auto">
-                                                <p>Full kitchen arrangement simulation</p>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                     <div class="carousel-item  h-100">
@@ -565,9 +571,7 @@
                                                  class="d-block w-100 h-100" 
                                                  alt="Simulation 1"
                                                  style="object-fit: cover;">
-                                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 mt-auto">
-                                                <p>Full kitchen arrangement simulation</p>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
