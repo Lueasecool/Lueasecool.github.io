@@ -464,204 +464,151 @@
         <div class="container">
             <h2 class="text-center fw-bold mb-5">Experimental Results</h2>
             
-            <div class="row g-4" style="align-items: stretch;"> <!-- 新增行对齐方式 -->
-                <!-- 左侧列 -->
-                <div class="col-md-6">
-                    <div class="d-flex flex-column h-100 gap-4"> <!-- 新增flex容器 -->
-                        <!-- 定量比较卡片 -->
-                        <div class="card flex-grow-1">
-                            <div class="card-body">
-                                <h5 class="card-title">Quantitative Comparison</h5>
-                                <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>Metric</th>
-                                                <th>ArrangeBot</th>
-                                                <th>Best Baseline</th>
-                                                <th>Improvement</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Pose Error (cm)</td>
-                                                <td>3.21</td>
-                                                <td>4.52</td>
-                                                <td class="text-success">29%↓</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Rotation Error (rad)</td>
-                                                <td>0.30</td>
-                                                <td>0.43</td>
-                                                <td class="text-success">30%↓</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Relationship Accuracy</td>
-                                                <td>96.54%</td>
-                                                <td>87.36%</td>
-                                                <td class="text-success">9.18%↑</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Experimental Results</h5>
+                            <div id="evalResultCarousel" class="carousel slide carousel-dark" data-bs-interval="false">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="exp-result-first-wrap">
+                                            <img src="exp/1.png" class="img-fluid rounded border exp-result-first" alt="Experimental result 1">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="exp/2.png" class="img-fluid rounded border" alt="Experimental result 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="exp/3.png" class="img-fluid rounded border" alt="Experimental result 3">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="exp/4.png" class="img-fluid rounded border" alt="Experimental result 4">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="exp/5.png" class="img-fluid rounded border" alt="Experimental result 5">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="exp/6.png" class="img-fluid rounded border" alt="Experimental result 6">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="exp/7.png" class="img-fluid rounded border" alt="Experimental result 7">
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-    
-                        <!-- 用户评价卡片 -->
-                        <div class="card flex-grow-1">
-                            <div class="card-body">
-                                <h5 class="card-title">User Evaluation</h5>
-                                <div class="text-center h-100 d-flex flex-column">
-                                    <img src="human_score.png" 
-                                         class="img-fluid rounded mt-auto" 
-                                         alt="User Evaluation"
-                                         style="object-fit: contain;">
-                                    <p class="text-center mt-3 mb-0">User preference scores across different methods</p>
-                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#evalResultCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#evalResultCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-    
-                <!-- 右侧列 -->
-                <div class="col-md-6">
-                    <div class="card h-100">
-                        <div class="card-body h-100 d-flex flex-column">
-                            <h5 class="card-title">Simulation Results</h5>
-                            <div id="simCarousel" class="carousel slide flex-grow-1" data-bs-ride="carousel">
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#simCarousel" data-bs-slide-to="0" class="active"></button>
-                                    <button type="button" data-bs-target="#simCarousel" data-bs-slide-to="1"></button>
-                                    <button type="button" data-bs-target="#simCarousel" data-bs-slide-to="2"></button>
-                                    <button type="button" data-bs-target="#simCarousel" data-bs-slide-to="3"></button>
-                                    <button type="button" data-bs-target="#simCarousel" data-bs-slide-to="4"></button>
-                                    <button type="button" data-bs-target="#simCarousel" data-bs-slide-to="5" class="active"></button>
-                                    <button type="button" data-bs-target="#simCarousel" data-bs-slide-to="6"></button>
-                                    <button type="button" data-bs-target="#simCarousel" data-bs-slide-to="7"></button>
-                                    <button type="button" data-bs-target="#simCarousel" data-bs-slide-to="8"></button>
-                                    <button type="button" data-bs-target="#simCarousel" data-bs-slide-to="9"></button>
-                                    <button type="button" data-bs-target="#simCarousel" data-bs-slide-to="10" class="active"></button>
-                                    <button type="button" data-bs-target="#simCarousel" data-bs-slide-to="11"></button>
 
-
-                                    <!-- 更新指示器数量 -->
-               
-                                </div>
-                                <div class="carousel-inner h-100">
-                                    <div class="carousel-item active h-100">
-                                        <div class="h-100 d-flex flex-column">
-                                            <img src="1.png" 
-                                                 class="d-block w-100 h-100" 
-                                                 alt="Simulation 1"
-                                                 style="object-fit: cover;">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Simulation Results</h5>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <h6 class="fw-semibold mb-3">SG-BOT dataset</h6>
+                                    <div id="simCarouselSGBot" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="SG-Bot/output_image_64.png" class="d-block w-100" alt="SG-BOT simulation 1" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="SG-Bot/output_image_69.png" class="d-block w-100" alt="SG-BOT simulation 2" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="SG-Bot/output_image_74.png" class="d-block w-100" alt="SG-BOT simulation 3" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="SG-Bot/output_image_91.png" class="d-block w-100" alt="SG-BOT simulation 4" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="SG-Bot/output_image_110.png" class="d-block w-100" alt="SG-BOT simulation 5" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="SG-Bot/output_image_129.png" class="d-block w-100" alt="SG-BOT simulation 6" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="SG-Bot/output_image_138.png" class="d-block w-100" alt="SG-BOT simulation 7" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="SG-Bot/output_image_146.png" class="d-block w-100" alt="SG-BOT simulation 8" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="SG-Bot/output_image_150.png" class="d-block w-100" alt="SG-BOT simulation 9" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="SG-Bot/output_image_152.png" class="d-block w-100" alt="SG-BOT simulation 10" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="SG-Bot/output_image_159.png" class="d-block w-100" alt="SG-BOT simulation 11" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="SG-Bot/output_image_163.png" class="d-block w-100" alt="SG-BOT simulation 12" style="object-fit: cover;">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="carousel-item  h-100">
-                                        <div class="h-100 d-flex flex-column">
-                                            <img src="2.png" 
-                                                 class="d-block w-100 h-100" 
-                                                 alt="Simulation 1"
-                                                 style="object-fit: cover;">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item  h-100">
-                                        <div class="h-100 d-flex flex-column">
-                                            <img src="3.png" 
-                                                 class="d-block w-100 h-100" 
-                                                 alt="Simulation 1"
-                                                 style="object-fit: cover;">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item  h-100">
-                                        <div class="h-100 d-flex flex-column">
-                                            <img src="4.png" 
-                                                 class="d-block w-100 h-100" 
-                                                 alt="Simulation 1"
-                                                 style="object-fit: cover;">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item  h-100">
-                                        <div class="h-100 d-flex flex-column">
-                                            <img src="5.png" 
-                                                 class="d-block w-100 h-100" 
-                                                 alt="Simulation 1"
-                                                 style="object-fit: cover;">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item  h-100">
-                                        <div class="h-100 d-flex flex-column">
-                                            <img src="6.png" 
-                                                 class="d-block w-100 h-100" 
-                                                 alt="Simulation 1"
-                                                 style="object-fit: cover;">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item  h-100">
-                                        <div class="h-100 d-flex flex-column">
-                                            <img src="7.png" 
-                                                 class="d-block w-100 h-100" 
-                                                 alt="Simulation 1"
-                                                 style="object-fit: cover;">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item  h-100">
-                                        <div class="h-100 d-flex flex-column">
-                                            <img src="8.png" 
-                                                 class="d-block w-100 h-100" 
-                                                 alt="Simulation 1"
-                                                 style="object-fit: cover;">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item  h-100">
-                                        <div class="h-100 d-flex flex-column">
-                                            <img src="9.png" 
-                                                 class="d-block w-100 h-100" 
-                                                 alt="Simulation 1"
-                                                 style="object-fit: cover;">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item  h-100">
-                                        <div class="h-100 d-flex flex-column">
-                                            <img src="10.png" 
-                                                 class="d-block w-100 h-100" 
-                                                 alt="Simulation 1"
-                                                 style="object-fit: cover;">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item  h-100">
-                                        <div class="h-100 d-flex flex-column">
-                                            <img src="11.png" 
-                                                 class="d-block w-100 h-100" 
-                                                 alt="Simulation 1"
-                                                 style="object-fit: cover;">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item  h-100">
-                                        <div class="h-100 d-flex flex-column">
-                                            <img src="12.png" 
-                                                 class="d-block w-100 h-100" 
-                                                 alt="Simulation 1"
-                                                 style="object-fit: cover;">
-                                            
-                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#simCarouselSGBot" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#simCarouselSGBot" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </button>
                                     </div>
                                 </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#simCarousel" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#simCarousel" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
-                                </button>
+                                <div class="col-md-6">
+                                    <h6 class="fw-semibold mb-3">mesatask-10k dataset</h6>
+                                    <div id="simCarouselMetatask" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="MesaTask-10k/11.png" class="d-block w-100" alt="mesatask-10k simulation 1" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="MesaTask-10k/3.png" class="d-block w-100" alt="mesatask-10k simulation 2" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="MesaTask-10k/4.png" class="d-block w-100" alt="mesatask-10k simulation 3" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="MesaTask-10k/6.png" class="d-block w-100" alt="mesatask-10k simulation 4" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="MesaTask-10k/7.png" class="d-block w-100" alt="mesatask-10k simulation 5" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="MesaTask-10k/8.png" class="d-block w-100" alt="mesatask-10k simulation 6" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="MesaTask-10k/front.png" class="d-block w-100" alt="mesatask-10k simulation 7" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="MesaTask-10k/front (2).png" class="d-block w-100" alt="mesatask-10k simulation 8" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="MesaTask-10k/front (3).png" class="d-block w-100" alt="mesatask-10k simulation 9" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="MesaTask-10k/front (4).png" class="d-block w-100" alt="mesatask-10k simulation 10" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="MesaTask-10k/front (5).png" class="d-block w-100" alt="mesatask-10k simulation 11" style="object-fit: cover;">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="MesaTask-10k/front (7).png" class="d-block w-100" alt="mesatask-10k simulation 12" style="object-fit: cover;">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#simCarouselMetatask" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon"></span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#simCarouselMetatask" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon"></span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -680,6 +627,42 @@
         .carousel-item {
             min-height: 650px; /* 根据实际内容调整 */
         }
+        #simCarouselSGBot .carousel-item,
+        #simCarouselMetatask .carousel-item {
+            min-height: 360px;
+        }
+    }
+    #simCarouselSGBot .carousel-inner,
+    #simCarouselMetatask .carousel-inner {
+        background: #fff;
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+    #simCarouselSGBot .carousel-item img,
+    #simCarouselMetatask .carousel-item img {
+        width: 100%;
+        height: 360px;
+        object-fit: contain;
+    }
+    .exp-result-first {
+        width: 100%;
+        max-width: 900px;
+        max-height: 520px;
+        object-fit: contain;
+    }
+    .exp-result-first-wrap {
+        min-height: 520px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .demo-row-nowrap {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    .demo-row-nowrap > [class*="col-"] {
+        min-width: 260px;
+        flex: 0 0 20%;
     }
     </style>
 
@@ -689,14 +672,12 @@
         <div class="container">
             <h2 class="text-center fw-bold mb-5">Video Demonstration</h2>
             
-            <!-- 三视频横向布局 -->
-            <div class="row g-4 justify-content-center">
-                <!-- Part 1 -->
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <!-- 五视频横向布局 -->
+            <div class="row g-4 justify-content-start demo-row-nowrap">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
                     <div class="card shadow-sm h-100">
                         <div class="ratio ratio-16x9">
-                            <video controls poster="part1-poster.jpg" class="embed-responsive-item">
-                                <source src="demo_part1.webm" type="video/webm">
+                            <video controls class="embed-responsive-item">
                                 <source src="demo_1.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -707,13 +688,11 @@
                         </div>
                     </div>
                 </div>
-    
-                <!-- Part 2 -->
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
+
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
                     <div class="card shadow-sm h-100">
                         <div class="ratio ratio-16x9">
-                            <video controls poster="part2-poster.jpg">
-                                <source src="demo_part2.webm" type="video/webm">
+                            <video controls>
                                 <source src="demo_2.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -724,13 +703,11 @@
                         </div>
                     </div>
                 </div>
-    
-                <!-- Part 3 -->
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
+
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
                     <div class="card shadow-sm h-100">
                         <div class="ratio ratio-16x9">
-                            <video controls poster="part3-poster.jpg">
-                                <source src="demo_part3.webm" type="video/webm">
+                            <video controls>
                                 <source src="demo_3.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -741,8 +718,159 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="ratio ratio-16x9">
+                            <video controls>
+                                <source src="demo_4.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Scene 4</h5>
+                            <p class="text-muted small mb-0">Duration: 0:32</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="ratio ratio-16x9">
+                            <video controls>
+                                <source src="demo_5.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Scene 5</h5>
+                            <p class="text-muted small mb-0">Duration: 0:30</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-    
+        </div>
+    </section>
+
+    <section class="py-5" id="robustness">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Environmental Robustness Analysis</h2>
+
+            <div class="mb-5">
+                <h4 class="fw-semibold mb-3">Lighting Variation</h4>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="ratio ratio-16x9">
+                                <video controls>
+                                    <source src="light/origin.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted small mb-0">Original lighting</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="ratio ratio-16x9">
+                                <video controls>
+                                    <source src="light/1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted small mb-0">Lighting setting 1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="ratio ratio-16x9">
+                                <video controls>
+                                    <source src="light/2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted small mb-0">Lighting setting 2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="ratio ratio-16x9">
+                                <video controls>
+                                    <source src="light/3.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted small mb-0">Lighting setting 3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="fw-semibold mb-3">Table Texture Variation</h4>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="ratio ratio-16x9">
+                                <video controls>
+                                    <source src="texture/origin.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted small mb-0">Original texture</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="ratio ratio-16x9">
+                                <video controls>
+                                    <source src="texture/1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted small mb-0">Texture setting 1</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="ratio ratio-16x9">
+                                <video controls>
+                                    <source src="texture/2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted small mb-0">Texture setting 2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card shadow-sm h-100">
+                            <div class="ratio ratio-16x9">
+                                <video controls>
+                                    <source src="texture/3.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-muted small mb-0">Texture setting 3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -750,25 +878,18 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark text-white">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
+            <div class="row justify-content-center text-center text-md-start g-4">
+                <div class="col-12 col-md-5">
                     <h5>ArrangeBot</h5>
                     <p>LLM-Guided Scene Graph-Conditioned Diffusion for Structured Robotic Tabletop Arrangement</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-12 col-md-5">
                     <h5>Contact</h5>
                     <ul class="list-unstyled">
                         <li>Zhipeng Wang</li>
                         <li>Shanghai Research Institute
                             for Intelligent Autonomous Systems, Tongji University</li>
                         <li>2411925@tongji.edu.cn</li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">GitHub Repository</a></li>
-                        <li><a href="#" class="text-white">Dataset Download</a></li>
                     </ul>
                 </div>
             </div>
